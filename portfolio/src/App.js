@@ -43,7 +43,7 @@ function App() {
 {/* <script src="https://kit.fontawesome.com/c4d19af1e9.js" crossorigin="anonymous"></script> */}
 
 <body id="page-top">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
       <span class="d-block d-lg-none">Pecoraro</span>
     </a>
@@ -77,7 +77,7 @@ function App() {
 					</li>
 					--> */}
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
+          <a class="nav-link js-scroll-trigger" href="#awards">Contact</a>
         </li>
       </ul>
     </div>
@@ -156,29 +156,28 @@ function App() {
 
     <section class="resume-section p-3 p-lg-5 d-flex flex-column " id="experience">
       <div class="container-fluid">
-        <h2 class="mb-5" >Work Experience</h2>
+        <h2 class="mb-5">Work Experience</h2>
         <div class="row" data-aos="fade-up">
           <div class="col">
+          <div class="d-flex justify-content-between">
             <h3 class="mb-0">Software Developer Intern</h3>
+            <h3 class="mb-0">June 2021 - December 2021</h3>
+          </div>
             <div class="subheading mb-3">Reaction Digital</div>
             <ul>
               <li>
-                Led a team of 15 engineers to develop and maintain many services written in C# .NET in Azure to
-                f
+                Intern at video game start up, with the main project focusing on Aerial Heroes, a game focused on Aerial combat
               </li>
               <li>
-                Delivered digital check in’s first monetization feature, reservations addons, generating $1.3M in the
-                first two months
+                In charge of the aircraft movement, interactions, and shooting. Achieved smooth movement within the aircraft,
+                as well as the ability for the aircraft to throw projectiles. 
               </li>
               <li>
-                Designed and developed a cloud housekeeping service that remains in sync with the on-premises source
-                system while providing a fa
+                Helped to work on the networking of the game, allowing players to be able to join a game through server selection. 
               </li>
             </ul>
           </div>
-          <div class="resume-date text-md-right">
-          <span class="text-primary">July 2021 - March 2022</span>
-          </div>
+          
         </div>
 
         <div class="resume-item d-flex flex-column flex-md-row mb-5" data-aos="fade-up">
@@ -411,12 +410,13 @@ function App() {
         {/* </div> */}
         <div class = "row">
           <div class="col-md-7 " data-aos="fade-up" id = "projectImageColumn">
-              <img src={require('./buses.png')}class = "img-fluid" alt="Python" id="projectImage"/>
+            <img src={require('./buses.png')}class = "img-fluid" alt="Python" id="projectImage"/>
           </div> 
           <div class="col-md-5">
             <h3 class="mb-0">CTA Bus Delay Tracker</h3>
               <div class="subheading mb-3">
-                Web Application<br />
+              <div>Web Application- <a href="https://github.com/specoraro1200/ctabustracker">View Code</a>
+              </div>
                 <ul class="list-inline list-social-icons mb-0" >
                   <span>Skills Used: </span>
                   <li class="list-inline-item" >
@@ -455,7 +455,9 @@ function App() {
           <div class="col-md-5">
             <h3 class="mb-0">CNN Stock Scraper</h3>
             <div class="subheading mb-3">
-              Web Application<br />
+            <div>Web Application- <a href="https://github.com/specoraro1200/Collect-Stock-Data-Through-Terminal">View Code</a>
+              </div>
+              
               <ul class="list-inline list-social-icons mb-0" >
                 <span>Skills Used: </span>
                 <li class="list-inline-item" >
@@ -486,8 +488,10 @@ function App() {
           </div> 
           <div class="col-md-5">
             <h3 class="mb-0">Performance Scheduler</h3>
+            
             <div class="subheading mb-3">
-              Web Application<br />
+            <div>Web Application- <a href="https://github.com/specoraro1200/DatabaseProject">View Code</a>
+              </div>
               <ul class="list-inline list-social-icons mb-0" >
                 <span>Skills Used: </span>
                 <li class="list-inline-item" >
@@ -511,14 +515,13 @@ function App() {
 
           <div class ="row">
           <div class="col-md-7" id = "projectImageColumn">
-            <a href="http://www.performancescheduler.com">
               <img src={require('./slime.png')}class = "img-fluid" alt="Python" id="projectImage"/>
-            </a>
           </div> 
           <div class="col-md-5">
             <h3 class="mb-0">SlimeByte</h3>
             <div class="subheading mb-3">
-              Game<br />
+              <div>Game- <a href="https://github.com/csantana1121/Slime-pygames">View Code</a>
+              </div>
               <ul class="list-inline list-social-icons mb-0" >
                 <span>Skills Used: </span>
                 <li class="list-inline-item" >
@@ -526,12 +529,11 @@ function App() {
                 </li>
               </ul>
               <ul>
-                <li>Developed a web application that allows users to compare CNN's estimation of stock prices against real prices. </li>
-                <li>A bash script runs once daily on an AWS EC2 which web scrapes over 6000 pages from CNN. </li>
-                <li>A postgres database stores the data from the webscraping, as well as user data. </li>
-                <li>If a stock is not available, a use is able to send a request to the server, which checks if that stock is both available for web scraping and is not already covered, 
-                  then, that stock will be able to be webscraped daily </li>
-                <li>Additionally, users can favorite a stock and view it in a table for ease of access.</li>
+                <li>Developed a platform based game where the player controls a slime trying to escape out of the cave </li>
+                <li>Game was built with Python and Pygame</li>
+                <li>The player can pick up powerups, which can change the players primary weapon or movement into something powerful</li>
+                <li>The game has three levels, and the player cannot die or else they will have to resetart from level 1</li>
+                <li>Enemies are littered throughout the level, and so the player must navigate around them in order to make it to the end of the level</li>
               </ul>
             </div>
           </div>
@@ -666,51 +668,6 @@ function App() {
 				</div>
 			</section>
 			--> */}
-
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
-      <div class="my-auto">
-        <h2 class="mb-5">Awards</h2>
-        <ul class="fa-ul mb-0">
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Summa Cum Laude Graduate (2018)
-          </li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Best Graduating Graduate Student (2018)
-          </li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Summa Cum Laude Graduate (2015)
-          </li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Dean’s List for 8 consecutive years at the University of North Georgia, the University of West Georgia,
-            and Kennesaw State University (2010 - 2018)
-          </li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Ingram Scholar Recipient: requiring a 3.75 or higher cumulative GPA (2015)
-          </li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Distinguished Honor Graduate of the Army Warrior Leadership Course (2013)
-          </li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Honor Graduate of the United States Army Chemical School class 22-10 (2010)
-          </li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            3 Certificates of Achievement for excellent performances during various Army training events (2010-2015)
-          </li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Achieved a “Gold” rating in the Georgia Work Ready program (2009)
-          </li>
-        </ul>
-      </div>
-    </section>
   </div>
 
   {/* <!-- Bootstrap core JavaScript --> */}
