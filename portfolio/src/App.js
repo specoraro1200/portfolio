@@ -46,9 +46,7 @@ function App() {
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
       <span class="d-block d-lg-none">Pecoraro</span>
-      <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src={require('./sal.jpg')} alt="" />
-      </span>
+
     </a>
     <img/>
 
@@ -87,7 +85,10 @@ function App() {
   </nav>
 
   <div class="container-fluid p-0">
-    <section class="resume-section d-flex d-column" id="about">
+    <section class="resume-section d-flex justify-content-md-center" id="about">
+      <span class="d-none d-lg-block mx-4 mt-5">
+        <img class="img-fluid img-profile rounded-circle" src={require('./sal.jpg')} height = "100" width="120" alt="" />
+      </span>
       <div class="my-auto" data-aos="zoom-out">
         <h1 class="mb-0" >
           <span class = "name">Sal</span>
@@ -157,13 +158,12 @@ function App() {
     
 
     <section class="resume-section p-3 p-lg-5 d-flex flex-column " id="experience">
-      <div class="my-auto">
-        <h2 class="mb-5" >Experience</h2>
-
-        <div class="resume-item d-flex flex-column flex-md-row mb-5" data-aos="fade-up">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">TMobile</h3>
-            <div class="subheading mb-3">MGM Resorts International</div>
+      <div class="container-fluid">
+        <h2 class="mb-5" >Work Experience</h2>
+        <div class="row" data-aos="fade-up">
+          <div class="col">
+            <h3 class="mb-0">Software Developer Intern</h3>
+            <div class="subheading mb-3">Reaction Digital</div>
             <ul>
               <li>
                 Led a team of 15 engineers to develop and maintain many services written in C# .NET in Azure to
@@ -398,7 +398,7 @@ function App() {
     <section class="resume-section" id="projects">
       <div class="my-auto">
       <div class="container-fluid">
-        <h2 class="mb-5" style = {{textAlign: "center"}}>Projects</h2>
+        <h2 class="mb-5" >Projects</h2>
         {/* <div class="row "> */}
           {/* <div class="col-md-7 ">
             <img src={require('./buses.png')}class = "img-fluid" alt="Python" id="busesImage"/>
