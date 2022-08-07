@@ -59,19 +59,11 @@ h2 {
   font-size: 1.35rem;
 }
 
-.list-social-icons a {
-  color: #495057;
+.links{
+  font-size: 1.55rem;
 }
 
 
-
-.list-social-icons a .fa-lg {
-  font-size: 1.75rem;
-}
-
-.list-icons {
-  font-size: 3rem;
-}
 
 /* #stock:hover {
   color: #1dd60d;

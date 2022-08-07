@@ -86,9 +86,6 @@ function App() {
 
   <div class="container-fluid p-0">
     <section class="resume-section d-flex justify-content-md-center" id="about">
-      <span class="d-none d-lg-block mx-4 mt-5">
-        <img class="img-fluid img-profile rounded-circle" src={require('./sal.jpg')} height = "100" width="120" alt="" />
-      </span>
       <div class="my-auto" data-aos="zoom-out">
         <h1 class="mb-0" >
           <span class = "name">Sal</span>
@@ -108,10 +105,10 @@ function App() {
         <br /> */}
         {/* <br /> */}
         
-        <ul class="list-inline list-social-icons mb-0" >
-          <li class="list-inline-item" >
+        <ul class="list-inline links mb-0" >
+          <li class="list-inline-item" id = "stock">
             <a href="http://www.cnnstockpredictor.com/polls">
-              <span class="fa-stack fa-lg" id = "stock">
+              <span class="fa-stack fa-lg" >
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa-solid fa-arrow-trend-up fa-stack-1x fa-inverse" ></i>
               </span>
@@ -144,6 +141,7 @@ function App() {
               </span>
             </a>
           </li>
+
           <li class="list-inline-item" id = "leetcode">
             <a href="https://leetcode.com/salsalsalsal/">
               <span class="fa-stack fa-lg">
