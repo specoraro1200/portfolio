@@ -46,7 +46,6 @@ function App() {
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
       <span class="d-block d-lg-none">Pecoraro</span>
-
     </a>
     <img/>
 
@@ -508,6 +507,34 @@ function App() {
                 <li>Additionally, users can favorite a stock and view it in a table for ease of access.</li>
               </ul>
             </div>
+          </div>
+
+          <div class ="row">
+          <div class="col-md-7" id = "projectImageColumn">
+            <a href="http://www.performancescheduler.com">
+              <img src={require('./slime.png')}class = "img-fluid" alt="Python" id="projectImage"/>
+            </a>
+          </div> 
+          <div class="col-md-5">
+            <h3 class="mb-0">SlimeByte</h3>
+            <div class="subheading mb-3">
+              Game<br />
+              <ul class="list-inline list-social-icons mb-0" >
+                <span>Skills Used: </span>
+                <li class="list-inline-item" >
+                <img src={require('./python.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
+                </li>
+              </ul>
+              <ul>
+                <li>Developed a web application that allows users to compare CNN's estimation of stock prices against real prices. </li>
+                <li>A bash script runs once daily on an AWS EC2 which web scrapes over 6000 pages from CNN. </li>
+                <li>A postgres database stores the data from the webscraping, as well as user data. </li>
+                <li>If a stock is not available, a use is able to send a request to the server, which checks if that stock is both available for web scraping and is not already covered, 
+                  then, that stock will be able to be webscraped daily </li>
+                <li>Additionally, users can favorite a stock and view it in a table for ease of access.</li>
+              </ul>
+            </div>
+          </div>
           </div>
         </div>
       </div>
