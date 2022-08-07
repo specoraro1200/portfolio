@@ -109,7 +109,7 @@ h2 {
 #github:hover  .fa.fa-circle { opacity:1.0; color:rgb(247, 9, 9); transition:.4s; transform:scale(1.1);}
 
 #leetcode        .fa.fa-circle { opacity:1.0; color:rgb(22, 21, 21); transition:.6s;}
-#leetcode:hover  .fa.fa-circle { opacity:1.0; color:rgb(11, 110, 19); transition:.4s; transform:scale(1.1);}
+#leetcode:hover  .fa.fa-circle { opacity:1.0; color:rgb(209, 146, 28); transition:.4s; transform:scale(1.1);}
 
 #sideNav .navbar-nav .nav-item .nav-link {
   font-weight: 600;
@@ -160,8 +160,6 @@ section.resume-section {
   padding-top: 5rem !important;
   padding-bottom: 5rem !important;
 }
-
-
 
 section.resume-section .resume-item .resume-date {
   max-width: 1rem;

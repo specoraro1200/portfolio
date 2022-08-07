@@ -377,6 +377,7 @@ function App() {
       </div>
     </section>
 
+     {/* This code has a bug nigga */}
     <section class="resume-section p-3" id="education">
       <div class="my-auto">
         <h2 class="mb-5">Education</h2>
@@ -387,9 +388,9 @@ function App() {
             <div>Computer Science</div>
             <p>GPA: 3.8</p>
           </div>
-          <div class="resume-date text-md-right">
+          {/* <div class="resume-date text-md-right">
             <span class="text-primary">January 2017 - December 2018</span>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
