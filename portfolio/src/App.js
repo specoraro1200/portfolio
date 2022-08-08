@@ -8,10 +8,16 @@ import ScrollTrigger from '@terwanerik/scrolltrigger'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import {useEffect} from 'react'
-
+import { Tooltip } from "bootstrap";
 function App() {
   useEffect(() => {
     AOS.init({once:true});
+    var tooltipTriggerList = [].slice.call(
+      document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    );
+    tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new Tooltip(tooltipTriggerEl);
+    });
   }, []);
 
   return (
@@ -88,6 +94,7 @@ function App() {
           <span class = "name">Sal</span>
           <span class="text-primary name"> Pecoraro</span>
         </h1>
+          
         <h3>Full Stack Developer</h3>
         <div class="subheading mb-5">
           Chicago, IL
@@ -424,7 +431,7 @@ function App() {
                 <ul class="list-inline list-social-icons mb-0" >
                   <span>Skills Used: </span>
                   <li class="list-inline-item" >
-                  <img src={require('./jupyter.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
+                  <img src={require('./jupyter.png')} class = "tooltips "alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
                   <img src={require('./python.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
                   </li>
                 </ul>
@@ -444,13 +451,7 @@ function App() {
       </div>
       </div>
     </section>
-    <div class="btn btn-primary tooltips">Hover Me to Preview
-          <div class="top">
-              <h3>Lorem Ipsum</h3>
-              <p>Dolor sit amet, consectetur adipiscing elit.</p>
-              <i></i>
-            </div>
-        </div>
+
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
     
       <div class="my-auto">
