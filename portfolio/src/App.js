@@ -157,13 +157,14 @@ function App() {
     <section class="resume-section p-3 p-lg-5 d-flex flex-column " id="experience">
       <div class="container-fluid">
         <h2 class="mb-5">Work Experience</h2>
+
         <div class="row" data-aos="fade-up">
           <div class="col">
           <div class="d-flex justify-content-between">
-            <h3 class="mb-0">Software Developer Intern</h3>
-            <h3 class="mb-0">June 2021 - December 2021</h3>
+            <h3 class="mb-0">IT/AWS Support</h3>
+            <h3 class="mb-0">January 2022 - July 2022</h3>
           </div>
-            <div class="subheading mb-3">Reaction Digital</div>
+            <div class="subheading mb-3">Mikan Associates</div>
             <ul>
               <li>
                 Intern at video game start up, with the main project focusing on Aerial Heroes, a game focused on Aerial combat
@@ -177,199 +178,74 @@ function App() {
               </li>
             </ul>
           </div>
-          
         </div>
 
-        <div class="resume-item d-flex flex-column flex-md-row mb-5" data-aos="fade-up">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">TMobile</h3>
-            <div class="subheading mb-3">MGM Resorts International</div>
+        <div class="row" data-aos="fade-up">
+          <div class="col">
+          <div class="d-flex justify-content-between">
+            <h3 class="mb-0">Software Developer Intern</h3>
+            <h3 class="mb-0">June 2021 - December 2021</h3>
+          </div>
+            <div class="subheading mb-3">Reaction Digital</div>
             <ul>
               <li>
-                Led a team of 15 engineers to develop and maintain many services written in C# .NET in Azure to
-                facilitate our digital check in process
+                Responsible for the AWS enviornment, computer setup, and troubleshooting errors. 
               </li>
               <li>
-                Delivered digital check in’s first monetization feature, reservations addons, generating $1.3M in the
-                first two months
+                Created a bash script that automates computer setup, saving more than one hour of time for 
+                each computer setup. 
               </li>
               <li>
-                Designed and developed a cloud housekeeping service that remains in sync with the on-premises source
-                system while providing a fast, highly scalable, and highly available service to clients
+
               </li>
             </ul>
           </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">July 2021 - March 2022</span>
-          </div>
         </div>
 
-        <div class="resume-item d-flex flex-column flex-md-row mb-5" data-aos="fade-up">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">Senior Software Engineer</h3>
-            <div class="subheading mb-3">MGM Resorts International</div>
+        <div class="row" data-aos="fade-up">
+          <div class="col">
+          <div class="d-flex justify-content-between">
+            <h3 class="mb-0">Python Developer</h3>
+            <h3 class="mb-0">January 2021 - June 2021</h3>
+          </div>
+            <div class="subheading mb-3">Reaction Digital</div>
             <ul>
               <li>
-                Delivered core backend services for contactless digital check in 6 months ahead of schedule resulting in
-                helping the company reduce operational loss from $300M per month to $100M per month
+                Responsible for the AWS enviornment, computer setup, and troubleshooting errors. 
               </li>
               <li>
-                Led the development effort to build a GraphQL layer using Apollo Server (NodeJS) and Typescript on
-                top of many REST services to provide a unified, easy to consume API for client applications
+                Created a bash script that automates computer setup, saving more than one hour of time for 
+                each computer setup. 
               </li>
               <li>
-                Designed the GraphQL service to scale up and out to handle millions of requests per day using AWS ECS
-                and
-                Lambda
-              </li>
-              <li>
-                Built CICD using Github Actions to automate testing, building, and deploying to production and non-
-                production environments
-              </li>
-              <li>
-                Utilized Terraform infrastructure as code to automate creation and updating of cloud resources during
-                CICD
-              </li>
-              <li>
-                Built automation to create dashboards and monitoring and alerting to ensure the team consistently
-                meets out 99.9% uptime SLA
+                
               </li>
             </ul>
           </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">January 2020 - July 2021</span>
-          </div>
         </div>
 
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">Applications Developer II</h3>
-            <div class="subheading mb-3">Centuri Group</div>
+        <div class="row" data-aos="fade-up">
+          <div class="col">
+          <div class="d-flex justify-content-between">
+            <h3 class="mb-0">Retail Employee - Clicklist</h3>
+            <h3 class="mb-0">August 2019 - June-2021</h3>
+          </div>
+            <div class="subheading mb-3">Marianos</div>
             <ul>
               <li>
-                Led the initiative to convert our back-end web services to .NET Core from PHP, leading to up to 100%
-                speed increases on HTTP requests and resulting in better integration with our otherwise Microsoft
-                stack
-              </li>
-              <li>Mentored junior and senior developers alike on C#, TypeScript, and common design patterns</li>
-              <li>
-                Led the effort to start using TypeScript for front-end development, leading to more maintainable,
-                selfdocumenting code with less run-time errors
+                Responsible for the AWS enviornment, computer setup, and troubleshooting errors. 
               </li>
               <li>
-                Worked as part of a team to design, build, and maintain various in-house applications used by workers
-                to automate daily progress reporting, safety audits, materials management, and more
-              </li>
-              <li>Developed and maintained many RESTful APIs using SlimPHP (PHP), and .NET Core (C#)</li>
-              <li>
-                Developed and maintained many client side applications using JavaScript, AngularJS, VueJS, and Xamarin
+                Created a bash script that automates computer setup, saving more than one hour of time for 
+                each computer setup. 
               </li>
               <li>
-                Improved the development speed of the team and the maintainability of the PHP codebase by building an
-                OData Query Builder library for quick and fluent building of OData queries
+                
               </li>
             </ul>
           </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">March 2019 - January 2020</span>
-          </div>
         </div>
 
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">Software Developer Contractor</h3>
-            <div class="subheading mb-3">Wellborn Cabinets</div>
-            <ul>
-              <li>
-                Developed a web application (using Bootstrap, PHP, JavaScript, SQL, and the Google Maps API) and an
-                accompanying IOS application (using Swift) that allows a user to define a geofence shape on a map. The
-                shape is then saved in a database and anytime a user with the application installed on his/her phone
-                enters or exits any shape saved in the database, the entry/exit is recorded in the database
-              </li>
-              <li>
-                Created a web application (using JavaScript, jQuery, AJAX, and PHP) that allows users to create room
-                layouts with various 2D shapes. The shapes all have collision detection and will attempt to find the
-                next available area to occupy if a collision between two shapes occurs. The system also allows users
-                to save and load room layouts in a local database
-              </li>
-              <li>
-                Utilized the Google Drive, Gmail, YouTube, and Google Calendars API to integrate Google account
-                support into the company's existing content management system
-              </li>
-              <li>
-                Developed and maintained many PHP CRUD applications to collect, analyze, and display business data
-              </li>
-              <li>
-                Utilized the QuickBooks API and OAuth2 to build a web application (using PHP) to transmit and validate
-                secure transactions to QuickBooks
-              </li>
-              <li>Analyzed and diagrammed the company’s online ordering system using UML standards</li>
-              <li>Created a room designing program that allows users to design a room to their liking</li>
-              <li>
-                Developed a scheduling web application (using PHP, SQL, and Bootstrap) that shows the available time
-                slots for appointments based on the employee’s availability, room availability, and time and date
-              </li>
-            </ul>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">August 2016 - January 2019</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">Software Developer Contractor</h3>
-            <div class="subheading mb-3">Able Games LLC</div>
-            <ul>
-              <li>Worked as part of a team to develop a mobile game (Android and IOS) using Unity and C#</li>
-              <li>Developed the game’s artificial intelligence using finite state machines and behavior trees</li>
-              <li>
-                Optimized the game’s code to be able to achieve 30 FPS or more on target devices while rendering and
-                computing complex tasks for up to 50 units on screen at once
-              </li>
-              <li>Scripted roughly 80% of the game’s gameplay mechanics, logic, and features</li>
-              <li>
-                Demoed the prototype to producers and marketing professionals at the 2018 Game Developers Conference
-              </li>
-            </ul>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">December 2017 - August 2018</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">Chemical, Biological, Radiological, and Nuclear Specialist</h3>
-            <div class="subheading mb-3">U.S. Army Reserves</div>
-            <ul>
-              <li>Sergeant directly in charge of managing, supervising, leading, and training 4 people</li>
-              <li>Personally responsible for over $1.5 million worth of military equipment</li>
-              <li>Experienced in detecting, handling, analyzing, and decontaminating hazardous materials</li>
-              <li>Participated in 5 major Army training events</li>
-              <li>Completed and excelled in the Army Warrior Leadership Course</li>
-            </ul>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">November 2009 - November 2017</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">Family Services Counselor</h3>
-            <div class="subheading mb-3">FamiliesFirst Network</div>
-            <ul>
-              <li>Case manager responsible for 7 dependency court cases</li>
-              <li>Prepared and presented various legal documents to the court</li>
-              <li>Referred clients out to various community-based services based on family need</li>
-              <li>Responsible for assessing environments and people for potential child safety hazards</li>
-            </ul>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">August 2015 - July 2016</span>
-          </div>
-        </div>
       </div>
     </section>
 
