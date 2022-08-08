@@ -8,7 +8,12 @@ import ScrollTrigger from '@terwanerik/scrolltrigger'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import {useEffect} from 'react'
-import { Tooltip } from "bootstrap";
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
+import Tooltip from '@mui/material/Tooltip';
 function App() {
   useEffect(() => {
     AOS.init({once:true});
@@ -47,6 +52,7 @@ function App() {
 {/* <script src="https://kit.fontawesome.com/c4d19af1e9.js" crossorigin="anonymous"></script> */}
 
 <body id="page-top">
+  
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
       <span class="d-block d-lg-none">Pecoraro</span>
@@ -94,7 +100,19 @@ function App() {
           <span class = "name">Sal</span>
           <span class="text-primary name"> Pecoraro</span>
         </h1>
-          
+        <Grid container justifyContent="center">
+        <Grid item>
+          <Tooltip title="Add" placement="top-start">
+            <Button>top-start</Button>
+          </Tooltip>
+          <Tooltip title="Add" placement="top">
+            <Button>top</Button>
+          </Tooltip>
+          <Tooltip title="Add" placement="top-end">
+            <Button>top-end</Button>
+          </Tooltip>
+        </Grid>
+      </Grid>
         <h3>Full Stack Developer</h3>
         <div class="subheading mb-5">
           Chicago, IL
