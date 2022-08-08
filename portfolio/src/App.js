@@ -1,10 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "./resume.css"
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
-import 'bootstrap';
 import 'bootstrap/dist/js/bootstrap.js';
+import "./resume.css"
 import $ from 'jquery';
 import Popper from 'popper.js';
 import ScrollTrigger from '@terwanerik/scrolltrigger'
@@ -16,6 +13,7 @@ function App() {
   useEffect(() => {
     AOS.init({once:true});
   }, []);
+
   return (
     
 <html lang="en">
@@ -296,7 +294,7 @@ function App() {
                 <ul class="list-inline list-social-icons mb-0" >
                   <span>Skills Used: </span>
                   <li class="list-inline-item" >
-                  <img src={require('./react.png')} data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top" alt="Python" width="35" height="35" style={{marginRight:"1rem"}}/>
+                  <img src={require('./react.png')} alt="Python" width="35" height="35" style={{marginRight:"1rem"}}/>
                   <img src={require('./nodejs.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
                   <img src={require('./amazon-aws.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
                   <img src={require('./python.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
@@ -413,16 +411,51 @@ function App() {
               </ul>
             </div>
           </div>
+
+          <div class ="row">
+            <div class="col-md-7" id = "projectImageColumn">
+                <img src={require('./broadstreet.png')}class = "img-fluid" alt="Python" id="projectImage"/>
+            </div> 
+            <div class="col-md-5">
+              <h3 class="mb-0">Webscrape Covid Data</h3>
+              <div class="subheading mb-3">
+                <div>Game- <a href="https://github.com/specoraro1200/WebScrapingCovidData">View Code</a>
+                </div>
+                <ul class="list-inline list-social-icons mb-0" >
+                  <span>Skills Used: </span>
+                  <li class="list-inline-item" >
+                  <img src={require('./jupyter.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
+                  <img src={require('./python.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
+                  </li>
+                </ul>
+                <ul>
+                  <li>Developed a platform based game where the player controls a slime trying to escape out of the cave </li>
+                  <li>Game was built with Python and Pygame</li>
+                  <li>The player can pick up powerups, which can change the players primary weapon or movement into something powerful</li>
+                  <li>The game has three levels, and the player cannot die or else they will have to resetart from level 1</li>
+                  <li>Enemies are littered throughout the level, and so the player must navigate around them in order to make it to the end of the level</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
           </div>
         </div>
       </div>
       </div>
     </section>
-
+    <div class="btn btn-primary tooltips">Hover Me to Preview
+          <div class="top">
+              <h3>Lorem Ipsum</h3>
+              <p>Dolor sit amet, consectetur adipiscing elit.</p>
+              <i></i>
+            </div>
+        </div>
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+    
       <div class="my-auto">
         <h2 class="mb-5">Skills</h2>
-
+        
         <div class="subheading mb-3">Primary Programming Languages</div>
         <ul class="list-inline">
           <li class="list-inline-item">C#</li>
@@ -432,101 +465,51 @@ function App() {
           <li class="list-inline-item">SQL</li>
         </ul>
 
-        <div class="subheading mb-3">Secondary Programming Languages</div>
+        <div class="subheading mb-3">AWS Skills</div>
         <ul class="list-inline">
-          <li class="list-inline-item">Java</li>
-          <li class="list-inline-item">C++</li>
-          <li class="list-inline-item">Lua</li>
-        </ul>
 
-        <div class="subheading mb-3">Cloud Providers</div>
-        <ul class="list-inline">
-          <li class="list-inline-item">Azure (Function Apps, App Service, CosmosDB, Event hub, Event Grid, App Insights)
-          </li>
-          <li class="list-inline-item">AWS (Lambda, ECS, Fargate, ECR, AWS API Gateway, SNS, DynamoDB, Cloudwatch)</li>
-          <li class="list-inline-item">Google Cloud Platform (Apigee)</li>
         </ul>
 
         <div class="subheading mb-3">CICD</div>
         <ul class="list-inline">
           <li class="list-inline-item">Azure DevOps</li>
-          <li class="list-inline-item">Github Actions</li>
-          <li class="list-inline-item">Terraform</li>
-          <li class="list-inline-item">Azure Resource Manager (ARM) Templates</li>
+
         </ul>
 
         <div class="subheading mb-3">Frameworks</div>
         <ul class="list-inline">
           <li class="list-inline-item">.NET Core</li>
-          <li class="list-inline-item">.NET Framework</li>
-          <li class="list-inline-item">Hangfire</li>
-          <li class="list-inline-item">Apollo GraphQL</li>
-          <li class="list-inline-item">SlimPHP</li>
-          <li class="list-inline-item">Angular</li>
-          <li class="list-inline-item">AngularJS</li>
-          <li class="list-inline-item">VueJS</li>
-          <li class="list-inline-item">Unity</li>
+
         </ul>
 
         <div class="subheading mb-3">Testing Frameworks</div>
         <ul class="list-inline">
           <li class="list-inline-item">NUnit</li>
-          <li class="list-inline-item">XUnit</li>
-          <li class="list-inline-item">JUnit</li>
-          <li class="list-inline-item">PHPUnit</li>
-          <li class="list-inline-item">Jest</li>
+
         </ul>
 
         <div class="subheading mb-3">Databases</div>
         <ul class="list-inline">
           <li class="list-inline-item">Azure Cosmos DB</li>
-          <li class="list-inline-item">AWS DynamoDB</li>
-          <li class="list-inline-item">Microsoft SQL Server</li>
-          <li class="list-inline-item">MySQL</li>
-          <li class="list-inline-item">SQLite</li>
+
         </ul>
 
         <div class="subheading mb-3">Tools</div>
         <ul class="list-inline">
           <li class="list-inline-item">Docker</li>
-          <li class="list-inline-item">Git</li>
-          <li class="list-inline-item">Visual Studio Code</li>
-          <li class="list-inline-item">Visual Studio</li>
-          <li class="list-inline-item">SSH Tools (PuTTY, WinSCP)</li>
-          <li class="list-inline-item">Postman</li>
-          <li class="list-inline-item">Microsoft Azure</li>
-          <li class="list-inline-item">Azure DevOps</li>
-          <li class="list-inline-item">Chrome Developer Tools</li>
-          <li class="list-inline-item">Debuggers</li>
-          <li class="list-inline-item">Package Managers (NPM, Composer, NuGet)</li>
-          <li class="list-inline-item">UML Modeling Tools (MS Visio, draw.io)</li>
+
         </ul>
 
         <div class="subheading mb-3">Concepts</div>
         <ul class="list-inline">
           <li class="list-inline-item">RESTful APIs</li>
-          <li class="list-inline-item">GraphQL</li>
-          <li class="list-inline-item">Serverless</li>
-          <li class="list-inline-item">Infrastructure as Code</li>
-          <li class="list-inline-item">Object Oriented Analysis and Design</li>
-          <li class="list-inline-item">Object Oriented Programming</li>
-          <li class="list-inline-item">Design Patterns</li>
-          <li class="list-inline-item">Software Development Methodologies (Agile, Waterfall)</li>
-          <li class="list-inline-item">Testing and Quality Assurance</li>
-          <li class="list-inline-item">OData</li>
-          <li class="list-inline-item">LAMP Stack</li>
-          <li class="list-inline-item">MVC Architecture</li>
+
         </ul>
 
         <div class="subheading mb-3">Soft Skills</div>
         <ul class="list-inline">
           <li class="list-inline-item">Leadership</li>
-          <li class="list-inline-item">Teamwork</li>
-          <li class="list-inline-item">Team-building</li>
-          <li class="list-inline-item">Management</li>
-          <li class="list-inline-item">Conflict Resolution</li>
-          <li class="list-inline-item">Collaboration</li>
-          <li class="list-inline-item">Written and Verbal Communication</li>
+
         </ul>
       </div>
     </section>
@@ -547,44 +530,17 @@ function App() {
   </div>
 
   {/* <!-- Bootstrap core JavaScript --> */}
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
 
   {/* <!-- Plugin JavaScript --> */}
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   {/* <!-- Custom scripts for this template --> */}
   <script src="js/resume.min.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-  
-  </script>
+
 </body>
 
 </html>
-  //   <div className="App">
-  //     <Layout></Layout>
-  //     <header className="App-header">
-  //       <Button></Button>
-  //       <img src={logo} className="App-logo" alt="logo" />
-  //       <p>
-  //         Edit <code>src/App.js</code> and save to reload.
-  //       </p>
-  //       <a
-  //         className="App-link"
-  //         href="https://reactjs.org"
-  //         target="_blank"
-  //         rel="noopener noreferrer"
-  //       >
-  //         Learn React
-  //       </a>
-  //     </header>
-  //   </div>
-  // );
+
 )}
 
 export default App;
