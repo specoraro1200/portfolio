@@ -2,6 +2,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import "./resume.css"
+import ContactForm from './email';
 import $ from 'jquery';
 import Popper from 'popper.js';
 import ScrollTrigger from '@terwanerik/scrolltrigger'
@@ -16,7 +17,25 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 function App() {
   useEffect(() => {
-    AOS.init({once:true});
+    AOS.init({
+       // Global settings:
+       disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+       startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+       initClassName: 'aos-init', // class applied after initialization
+       animatedClassName: 'aos-animate', // class applied on animation
+       useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+       disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+       debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+       throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+       
+     
+       // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+       delay: 0, // values from 0 to 3000, with step 50ms
+       easing: 'ease', // default easing for AOS animations
+       once: true, // whether animation should happen only once - while scrolling down
+       mirror: true, // whether elements should animate out while scrolling past them
+       anchorPlacement: 'top-bottom',
+    });
     var tooltipTriggerList = [].slice.call(
       document.querySelectorAll('[data-bs-toggle="tooltip"]')
     );
@@ -52,7 +71,8 @@ function App() {
 {/* <script src="https://kit.fontawesome.com/c4d19af1e9.js" crossorigin="anonymous"></script> */}
 
 <body id="page-top">
-  
+         
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
       <span class="d-block d-lg-none">Pecoraro</span>
@@ -70,10 +90,10 @@ function App() {
           <a class="nav-link js-scroll-trigger" href="#about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+          <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
+          <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#education">Education</a>
@@ -87,7 +107,7 @@ function App() {
 					</li>
 					--> */}
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#awards">Contact</a>
+          <a class="nav-link js-scroll-trigger" href="#Contact">Contact</a>
         </li>
       </ul>
     </div>
@@ -95,24 +115,12 @@ function App() {
 
   <div class="container-fluid p-0">
     <section class="resume-section d-flex justify-content-md-center" id="about">
-      <div class="my-auto" data-aos="zoom-out">
+      <div class="my-auto" data-aos="zoom-out" data-aos-duration="2000">
         <h1 class="mb-0" >
           <span class = "name">Sal</span>
-          <span class="text-primary name"> Pecoraro</span>
+          <span class="name"> Pecoraro</span>
         </h1>
-        <Grid container justifyContent="center">
-        <Grid item>
-          <Tooltip title="Add" placement="top-start">
-            <Button>top-start</Button>
-          </Tooltip>
-          <Tooltip title="Add" placement="top">
-            <Button>top</Button>
-          </Tooltip>
-          <Tooltip title="Add" placement="top-end">
-            <Button>top-end</Button>
-          </Tooltip>
-        </Grid>
-      </Grid>
+        
         <h3>Full Stack Developer</h3>
         <div class="subheading mb-5">
           Chicago, IL
@@ -176,17 +184,249 @@ function App() {
       </div>
     </section>
     
+ 
 
+    <section class="resume-section" id="projects">
+      <div class="my-auto">
+      <div class="container-fluid">
+        <h2 class="mb-5" >Projects</h2>
+        {/* <div class="row "> */}
+          {/* <div class="col-md-7 ">
+            <img src={require('./buses.png')}class = "img-fluid" alt="Python" id="busesImage"/>
+          </div>  */}
+
+          {/* <div class="col-md-12">
+            <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">CTA Bus Delay Tracker</h3>
+            </div>
+            </div>
+          </div> */}
+        {/* </div> */}
+        <div class = "row" data-aos="fade-up">
+          <div class="col-md-7"  id = "projectImageColumn">
+            <img src={require('./buses.png')}class = "img-fluid" alt="Python" id="projectImage"/>
+          </div> 
+          <div class="col-md-5">
+            <h3 class="mb-0">CTA Bus Delay Tracker</h3>
+              <div class="subheading mb-3">
+              <div>Web Application- <a href="https://github.com/specoraro1200/ctabustracker">View Code</a>
+              </div>
+                <ul class="list-inline list-social-icons mb-0" >
+                  <span>Skills Used: </span>
+                  <li class="list-inline-item" >
+                  <Tooltip title="React.js" placement="top">
+                    <img src={require('./react.png')} alt="Python" width="35" height="35" style={{marginRight:"1rem"}}/>
+                  </Tooltip>
+                  <Tooltip title="Node.js" placement="top">
+                    <img src={require('./nodejs.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
+                  </Tooltip>
+                  <Tooltip title="RDS, Lambda, EC2" placement="top">
+                    <img src={require('./amazon-aws.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
+                  </Tooltip>
+                  <Tooltip title="MariaDB" placement="top">
+                    <img src={require('./mariadb.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
+                  </Tooltip>
+                  <Tooltip title="Redis" placement="top">
+                    <img src={require('./redis.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
+                  </Tooltip>
+                  <Tooltip title="Ubuntu" placement="top">
+                    <img src={require('./ubuntu.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
+                  </Tooltip>
+                  <Tooltip title="Bash" placement="top">
+                    <img src={require('./bash.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
+                  </Tooltip>
+                  <Tooltip title="Python" placement="top">
+                    <img src={require('./python.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
+                  </Tooltip>
+                  </li>
+                </ul>
+                <ul>
+                  <li>Developed a web application that allows users to track CTA bus delays. The application additionally allows users to 
+                    view how late a bus is on average. 
+                  </li>
+                  <li>An AWS Lambda function is called up to 400 times a day for all 1600 CTA buses to deliver the most up to date 
+                    contents to its users. This lambda function runs a python script that calls the CTA Rest API. 
+                  </li>
+                  <li>
+                    An AWS RDS MariaDB server is utilized to store bus data, user data, and web scraped data. To combat high load times from querying
+                    enourmouse tables, a Redis server was employed to cut down load times by up to 10 seconds. Redis was quick and easy to employ, and 
+                    helped to make the application more user friendly. 
+                  </li>
+                  <li>A React.js frontend and Node.js/express.js backend was used to create the web application. </li>
+                </ul>
+              </div>
+          </div>
+        </div>
+
+        <div class ="row" data-aos="fade-right">
+          <div class="col-md-7"  id = "projectImageColumn">
+            <a href="http://www.cnnstockpredictor.com/polls">
+              <img src={require('./cnn.png')}class = "img-fluid" alt="Python" id="projectImage"/>
+            </a>
+          </div> 
+          <div class="col-md-5">
+            <h3 class="mb-0">CNN Stock Scraper</h3>
+            <div class="subheading mb-3">
+            <div>Web Application- <a href="https://github.com/specoraro1200/Collect-Stock-Data-Through-Terminal">View Code</a>
+              </div>
+              
+              <ul class="list-inline  mb-0" >
+                <span>Skills Used: </span>
+                <li class="list-inline-item" >
+                <Tooltip title="Django" placement="top">
+                  <img src={require('./django.png')} alt="Python" width="35" height="35" style={{marginRight:"1rem"}}/>
+                </Tooltip>
+                <Tooltip title="EC2" placement="top">
+                  <img src={require('./amazon-aws.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
+                </Tooltip>
+                <Tooltip title="MySQL" placement="top">
+                  <img src={require('./mysql.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
+                </Tooltip>
+                <Tooltip title="Apache" placement="top">
+                  <img src={require('./apache.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
+                </Tooltip>
+                <Tooltip title="Ubuntu" placement="top">
+                  <img src={require('./ubuntu.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
+                </Tooltip>
+                <Tooltip title="Bash" placement="top">
+                  <img src={require('./bash.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
+                </Tooltip>
+                <Tooltip title="Python" placement="top">
+                  <img src={require('./python.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
+                </Tooltip>
+                </li>
+              </ul>
+              <ul>
+                <li>Developed a web application that allows users to compare CNN's estimation of stock prices against real prices. </li>
+                <li>A bash script runs once daily on an AWS EC2 which web scrapes over 6000 pages from CNN. </li>
+                <li>A postgres database stores the data from the webscraping, as well as user data. </li>
+                <li>If a stock is not available, a use is able to send a request to the server, which checks if that stock is both available for web scraping and is not already covered, 
+                  then, that stock will be able to be webscraped daily </li>
+                <li>Additionally, users can favorite a stock and view it in a table for ease of access.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class ="row" data-aos="fade-left">
+          <div class="col-md-7" id = "projectImageColumn">
+            <a href="http://www.performancescheduler.com">
+              <img src={require('./performanceScheduler.png')}class = "img-fluid" alt="Python" id="projectImage"/>
+            </a>
+          </div> 
+          <div class="col-md-5">
+            <h3 class="mb-0">Performance Scheduler</h3>
+            
+            <div class="subheading mb-3">
+            <div>Web Application- <a href="https://github.com/specoraro1200/DatabaseProject">View Code</a>
+              </div>
+              <ul class="list-inline list-social-icons mb-0" >
+                <span>Skills Used: </span>
+                <li class="list-inline-item" >
+                <Tooltip title="Django" placement="top">
+                  <img src={require('./django2.png')} alt="Python" width="35" height="35" style={{marginRight:"1rem"}}/>
+                </Tooltip>
+                <Tooltip title="EC2" placement="top">
+                  <img src={require('./amazon-aws.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
+                </Tooltip>
+                <Tooltip title="MySQL" placement="top">
+                  <img src={require('./mysql.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
+                </Tooltip>
+                <Tooltip title="Apache" placement="top">
+                  <img src={require('./apache.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
+                </Tooltip>
+                <Tooltip title="Ubuntu" placement="top">
+                  <img src={require('./ubuntu.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
+                </Tooltip>
+                <Tooltip title="Python" placement="top">
+                  <img src={require('./python.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
+                </Tooltip>
+                </li>
+              </ul>
+              <ul>
+                <li>Developed a web application that allows users to compare CNN's estimation of stock prices against real prices. </li>
+                <li>A bash script runs once daily on an AWS EC2 which web scrapes over 6000 pages from CNN. </li>
+                <li>A postgres database stores the data from the webscraping, as well as user data. </li>
+                <li>If a stock is not available, a use is able to send a request to the server, which checks if that stock is both available for web scraping and is not already covered, 
+                  then, that stock will be able to be webscraped daily </li>
+                <li>Additionally, users can favorite a stock and view it in a table for ease of access.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class ="row" data-aos="fade-up-right">
+            <div class="col-md-7" id = "projectImageColumn">
+                <img src={require('./broadstreet.png')}class = "img-fluid" alt="Python" id="projectImage"/>
+            </div> 
+            <div class="col-md-5">
+              <h3 class="mb-0">Webscrape Covid Data</h3>
+              <div class="subheading mb-3">
+                <div>Game- <a href="https://github.com/specoraro1200/WebScrapingCovidData">View Code</a>
+                </div>
+                <ul class="list-inline list-social-icons mb-0" >
+                  <span>Skills Used: </span>
+                  <li class="list-inline-item" >
+                  <Tooltip title="Jupyter Notebook" placement="top">
+                    <img src={require('./jupyter.png')} class = "tooltips "alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
+                  </Tooltip>
+                  <Tooltip title="Python" placement="top">
+                    <img src={require('./python.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
+                  </Tooltip>
+                  </li>
+                </ul>
+                <ul>
+                  <li>Developed a platform based game where the player controls a slime trying to escape out of the cave </li>
+                  <li>Game was built with Python and Pygame</li>
+                  <li>The player can pick up powerups, which can change the players primary weapon or movement into something powerful</li>
+                  <li>The game has three levels, and the player cannot die or else they will have to resetart from level 1</li>
+                  <li>Enemies are littered throughout the level, and so the player must navigate around them in order to make it to the end of the level</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class ="row" data-aos="fade-up-left">
+            <div class="col-md-7" id = "projectImageColumn">
+                <img src={require('./slime.png')}class = "img-fluid" alt="Python" id="projectImage"/>
+            </div> 
+          <div class="col-md-5">
+            <h3 class="mb-0">SlimeByte</h3>
+            <div class="subheading mb-3">
+              <div>Game- <a href="https://github.com/csantana1121/Slime-pygames">View Code</a>
+              </div>
+              <ul class="list-inline list-social-icons mb-0" >
+                <span>Skills Used: </span>
+                <li class="list-inline-item" >
+                  <Tooltip title="Python" placement="top">
+                    <img src={require('./python.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
+                  </Tooltip>
+                </li>
+              </ul>
+              <ul>
+                <li>Developed a platform based game where the player controls a slime trying to escape out of the cave </li>
+                <li>Game was built with Python and Pygame</li>
+                <li>The player can pick up powerups, which can change the players primary weapon or movement into something powerful</li>
+                <li>The game has three levels, and the player cannot die or else they will have to resetart from level 1</li>
+                <li>Enemies are littered throughout the level, and so the player must navigate around them in order to make it to the end of the level</li>
+              </ul>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
     <section class="resume-section p-3 p-lg-5 d-flex flex-column " id="experience">
       <div class="container-fluid">
         <h2 class="mb-5">Work Experience</h2>
 
-        <div class="row" data-aos="fade-up">
+        <div class="row" data-aos="flip-left" data-aos-offset="-300">
           <div class="col">
-          <div class="d-flex justify-content-between">
-            <h3 class="mb-0">IT/AWS Support</h3>
-            <h3 class="mb-0">January 2022 - July 2022</h3>
-          </div>
+            <div class="d-flex justify-content-between">
+              <h3 class="mb-0">IT/AWS Support</h3>
+              <h3 class="mb-0">January 2022 - July 2022</h3>
+            </div>
             <div class="subheading mb-3">Mikan Associates</div>
             <ul>
               <li>
@@ -203,7 +443,7 @@ function App() {
           </div>
         </div>
 
-        <div class="row" data-aos="fade-up">
+        <div class="row" data-aos="flip-right" data-aos-offset="-300">
           <div class="col">
           <div class="d-flex justify-content-between">
             <h3 class="mb-0">Software Developer Intern</h3>
@@ -225,7 +465,7 @@ function App() {
           </div>
         </div>
 
-        <div class="row" data-aos="fade-up">
+        <div class="row" data-aos="flip-up" data-aos-offset="-300">
           <div class="col">
           <div class="d-flex justify-content-between">
             <h3 class="mb-0">Python Developer</h3>
@@ -247,7 +487,7 @@ function App() {
           </div>
         </div>
 
-        <div class="row" data-aos="fade-up">
+        <div class="row" data-aos="flip-down" data-aos-offset="-300">
           <div class="col">
           <div class="d-flex justify-content-between">
             <h3 class="mb-0">Retail Employee - Clicklist</h3>
@@ -270,282 +510,78 @@ function App() {
         </div>
 
       </div>
-    </section>
-
-     {/* This code has a bug nigga */}
+    </section>   
+       
     <section class="resume-section p-3" id="education">
-      <div class="my-auto">
+    <div class="row" data-aos="flip-down" data-aos-offset="-300">
+          <div class="col">
+          <div class="d-flex justify-content-between">
+            <h3 class="mb-0">Loyola University Chicago - Bachelor of Science</h3>
+            <h3 class="mb-0">Graduating August 2019 - December-2022</h3>
+          </div>
+            <div class="subheading mb-3">Computer Science</div>
+            <ul>
+              <li>
+                Responsible for the AWS enviornment, computer setup, and troubleshooting errors. 
+              </li>
+              <li>
+                Created a bash script that automates computer setup, saving more than one hour of time for 
+                each computer setup. 
+              </li>
+              <li>
+              </li>
+            </ul>
+          </div>
+        </div>
+      <div class="my-auto" >
         <h2 class="mb-5">Education</h2>
-        <div class="resume-item d-flex mb-5">
+        <div class="resume-item d-flex mb-5" data-aos="zoom-in" data-aos-offset="-300">
           <div class="resume-content mr-auto">
             <h3 class="mb-0">Bachelor of Science</h3>
             <div class="subheading mb-3">Loyola University of Chicago| Chicago, IL</div>
             <div>Computer Science</div>
             <p>GPA: 3.8</p>
           </div>
-          {/* <div class="resume-date text-md-right">
+          <div class="resume-date text-md-right">
             <span class="text-primary">January 2017 - December 2018</span>
-          </div> */}
-        </div>
-      </div>
-    </section>
-
-    <section class="resume-section" id="projects">
-      <div class="my-auto">
-      <div class="container-fluid">
-        <h2 class="mb-5" >Projects</h2>
-        {/* <div class="row "> */}
-          {/* <div class="col-md-7 ">
-            <img src={require('./buses.png')}class = "img-fluid" alt="Python" id="busesImage"/>
-          </div>  */}
-
-          {/* <div class="col-md-12">
-            <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">CTA Bus Delay Tracker</h3>
-            </div>
-            </div>
-          </div> */}
-        {/* </div> */}
-        <div class = "row">
-          <div class="col-md-7 " data-aos="fade-up" id = "projectImageColumn">
-            <img src={require('./buses.png')}class = "img-fluid" alt="Python" id="projectImage"/>
-          </div> 
-          <div class="col-md-5">
-            <h3 class="mb-0">CTA Bus Delay Tracker</h3>
-              <div class="subheading mb-3">
-              <div>Web Application- <a href="https://github.com/specoraro1200/ctabustracker">View Code</a>
-              </div>
-                <ul class="list-inline list-social-icons mb-0" >
-                  <span>Skills Used: </span>
-                  <li class="list-inline-item" >
-                  <img src={require('./react.png')} alt="Python" width="35" height="35" style={{marginRight:"1rem"}}/>
-                  <img src={require('./nodejs.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
-                  <img src={require('./amazon-aws.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
-                  <img src={require('./python.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
-                  <img src={require('./ubuntu.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
-                  <img src={require('./redis.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
-                  </li>
-                </ul>
-                <ul>
-                  <li>Developed a web application that allows users to track CTA bus delays. The application additionally allows users to 
-                    view how late a bus is on average. 
-                  </li>
-                  <li>An AWS Lambda function is called up to 400 times a day for all 1600 CTA buses to deliver the most up to date 
-                    contents to its users. This lambda function runs a python script that calls the CTA Rest API. 
-                  </li>
-                  <li>
-                    An AWS RDS MariaDB server is utilized to store bus data, user data, and web scraped data. To combat high load times from querying
-                    enourmouse tables, a Redis server was employed to cut down load times by up to 10 seconds. Redis was quick and easy to employ, and 
-                    helped to make the application more user friendly. 
-                  </li>
-                  <li>A React.js frontend and Node.js/express.js backend was used to create the web application. </li>
-                </ul>
-              </div>
           </div>
         </div>
-
-        <div class ="row">
-          <div class="col-md-7 " id = "projectImageColumn">
-            <a href="http://www.cnnstockpredictor.com/polls">
-              <img src={require('./cnn.png')}class = "img-fluid" alt="Python" id="projectImage"/>
-            </a>
-          </div> 
-          <div class="col-md-5">
-            <h3 class="mb-0">CNN Stock Scraper</h3>
-            <div class="subheading mb-3">
-            <div>Web Application- <a href="https://github.com/specoraro1200/Collect-Stock-Data-Through-Terminal">View Code</a>
-              </div>
-              
-              <ul class="list-inline list-social-icons mb-0" >
-                <span>Skills Used: </span>
-                <li class="list-inline-item" >
-                <img src={require('./django.png')} alt="Python" width="35" height="35" style={{marginRight:"1rem"}}/>
-                <img src={require('./postgresql.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
-                <img src={require('./python.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
-                <img src={require('./amazon-aws.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
-                <img src={require('./ubuntu.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
-                </li>
-              </ul>
-              <ul>
-                <li>Developed a web application that allows users to compare CNN's estimation of stock prices against real prices. </li>
-                <li>A bash script runs once daily on an AWS EC2 which web scrapes over 6000 pages from CNN. </li>
-                <li>A postgres database stores the data from the webscraping, as well as user data. </li>
-                <li>If a stock is not available, a use is able to send a request to the server, which checks if that stock is both available for web scraping and is not already covered, 
-                  then, that stock will be able to be webscraped daily </li>
-                <li>Additionally, users can favorite a stock and view it in a table for ease of access.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class ="row">
-          <div class="col-md-7" id = "projectImageColumn">
-            <a href="http://www.performancescheduler.com">
-              <img src={require('./performanceScheduler.png')}class = "img-fluid" alt="Python" id="projectImage"/>
-            </a>
-          </div> 
-          <div class="col-md-5">
-            <h3 class="mb-0">Performance Scheduler</h3>
-            
-            <div class="subheading mb-3">
-            <div>Web Application- <a href="https://github.com/specoraro1200/DatabaseProject">View Code</a>
-              </div>
-              <ul class="list-inline list-social-icons mb-0" >
-                <span>Skills Used: </span>
-                <li class="list-inline-item" >
-                <img src={require('./django.png')} alt="Python" width="35" height="35" style={{marginRight:"1rem"}}/>
-                <img src={require('./postgresql.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
-                <img src={require('./python.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
-                <img src={require('./amazon-aws.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
-                <img src={require('./ubuntu.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
-                </li>
-              </ul>
-              <ul>
-                <li>Developed a web application that allows users to compare CNN's estimation of stock prices against real prices. </li>
-                <li>A bash script runs once daily on an AWS EC2 which web scrapes over 6000 pages from CNN. </li>
-                <li>A postgres database stores the data from the webscraping, as well as user data. </li>
-                <li>If a stock is not available, a use is able to send a request to the server, which checks if that stock is both available for web scraping and is not already covered, 
-                  then, that stock will be able to be webscraped daily </li>
-                <li>Additionally, users can favorite a stock and view it in a table for ease of access.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class ="row">
-          <div class="col-md-7" id = "projectImageColumn">
-              <img src={require('./slime.png')}class = "img-fluid" alt="Python" id="projectImage"/>
-          </div> 
-          <div class="col-md-5">
-            <h3 class="mb-0">SlimeByte</h3>
-            <div class="subheading mb-3">
-              <div>Game- <a href="https://github.com/csantana1121/Slime-pygames">View Code</a>
-              </div>
-              <ul class="list-inline list-social-icons mb-0" >
-                <span>Skills Used: </span>
-                <li class="list-inline-item" >
-                <img src={require('./python.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
-                </li>
-              </ul>
-              <ul>
-                <li>Developed a platform based game where the player controls a slime trying to escape out of the cave </li>
-                <li>Game was built with Python and Pygame</li>
-                <li>The player can pick up powerups, which can change the players primary weapon or movement into something powerful</li>
-                <li>The game has three levels, and the player cannot die or else they will have to resetart from level 1</li>
-                <li>Enemies are littered throughout the level, and so the player must navigate around them in order to make it to the end of the level</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class ="row">
-            <div class="col-md-7" id = "projectImageColumn">
-                <img src={require('./broadstreet.png')}class = "img-fluid" alt="Python" id="projectImage"/>
-            </div> 
-            <div class="col-md-5">
-              <h3 class="mb-0">Webscrape Covid Data</h3>
-              <div class="subheading mb-3">
-                <div>Game- <a href="https://github.com/specoraro1200/WebScrapingCovidData">View Code</a>
-                </div>
-                <ul class="list-inline list-social-icons mb-0" >
-                  <span>Skills Used: </span>
-                  <li class="list-inline-item" >
-                  <img src={require('./jupyter.png')} class = "tooltips "alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
-                  <img src={require('./python.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
-                  </li>
-                </ul>
-                <ul>
-                  <li>Developed a platform based game where the player controls a slime trying to escape out of the cave </li>
-                  <li>Game was built with Python and Pygame</li>
-                  <li>The player can pick up powerups, which can change the players primary weapon or movement into something powerful</li>
-                  <li>The game has three levels, and the player cannot die or else they will have to resetart from level 1</li>
-                  <li>Enemies are littered throughout the level, and so the player must navigate around them in order to make it to the end of the level</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          </div>
-        </div>
-      </div>
       </div>
     </section>
 
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
-    
       <div class="my-auto">
         <h2 class="mb-5">Skills</h2>
         
-        <div class="subheading mb-3">Primary Programming Languages</div>
-        <ul class="list-inline">
-          <li class="list-inline-item">C#</li>
-          <li class="list-inline-item">PHP</li>
-          <li class="list-inline-item">TypeScript</li>
-          <li class="list-inline-item">JavaScript</li>
-          <li class="list-inline-item">SQL</li>
-        </ul>
+        <h3 class="subheading mb-3">Programming Languages</h3>
+          <ul class="list-inline">
+            <li class="list-inline-item">Java, Python, Javascript, HTML, CSS, bash</li>
+          </ul>
 
-        <div class="subheading mb-3">AWS Skills</div>
-        <ul class="list-inline">
+        <h3 class="subheading mb-3">AWS Skills</h3>
+          <ul class="list-inline">
+            <li class="list-inline-item">Lambda, EC2, S3, RDS, Route53</li>
+          </ul>
 
-        </ul>
+        <h3 class="subheading mb-3">Frameworks</h3>
+          <ul class="list-inline">
+            <li class="list-inline-item">React.js, Django, Flask, Node.js, Express.js</li>
+          </ul>
 
-        <div class="subheading mb-3">CICD</div>
-        <ul class="list-inline">
-          <li class="list-inline-item">Azure DevOps</li>
+        <h3 class="subheading mb-3">Databases</h3>
+          <ul class="list-inline">
+            <li class="list-inline-item">MariaDB, MySQL, Postgresql, Redis, MongoDB</li>
+          </ul>
 
-        </ul>
-
-        <div class="subheading mb-3">Frameworks</div>
-        <ul class="list-inline">
-          <li class="list-inline-item">.NET Core</li>
-
-        </ul>
-
-        <div class="subheading mb-3">Testing Frameworks</div>
-        <ul class="list-inline">
-          <li class="list-inline-item">NUnit</li>
-
-        </ul>
-
-        <div class="subheading mb-3">Databases</div>
-        <ul class="list-inline">
-          <li class="list-inline-item">Azure Cosmos DB</li>
-
-        </ul>
-
-        <div class="subheading mb-3">Tools</div>
-        <ul class="list-inline">
-          <li class="list-inline-item">Docker</li>
-
-        </ul>
-
-        <div class="subheading mb-3">Concepts</div>
-        <ul class="list-inline">
-          <li class="list-inline-item">RESTful APIs</li>
-
-        </ul>
-
-        <div class="subheading mb-3">Soft Skills</div>
-        <ul class="list-inline">
-          <li class="list-inline-item">Leadership</li>
-
-        </ul>
       </div>
     </section>
 
-    {/* <!--
-			<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
-				<div class="my-auto">
-					<h2 class="mb-5">Interests</h2>
-					<p>
-						Work in progress.
-					</p>
-					<p class="mb-0">
-						Work in progress.
-					</p>
-				</div>
-			</section>
-			--> */}
+     {/* <section class="resume-section p-3" id="Contact">
+      <div class="my-auto">
+        <h2 class="mb-5">Contact</h2>
+        <ContactForm />  
+      </div>
+    </section>       */}
   </div>
 
   {/* <!-- Bootstrap core JavaScript --> */}
