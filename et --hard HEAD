@@ -1,0 +1,106 @@
+[33mcommit 4811e39054708d8519fc43b9d29bd8d7b54446dd[m[33m ([m[1;36mHEAD[m[33m)[m
+Author: specoraro1200 <specoraro@luc.edu>
+Date:   Tue Aug 9 17:22:43 2022 -0500
+
+    TESTFILE
+
+[33mcommit 7e89ecd82b52bfd1e1c00b43c68d8379f43d60b9[m
+Author: specoraro1200 <specoraro@luc.edu>
+Date:   Tue Aug 9 17:11:08 2022 -0500
+
+    Check if reinitailization worked
+
+[33mcommit 3baf9858524453b3006fee1b8947cde174385ac0[m
+Merge: e7cea70 828f86b
+Author: specoraro1200 <specoraro@luc.edu>
+Date:   Tue Aug 9 17:07:44 2022 -0500
+
+    Merge Test
+    Merge branch 'master' of https://github.com/specoraro1200/portfolio
+
+[33mcommit e7cea70789a2afaeaf01fbb967aaea27e8b5c6bb[m
+Author: specoraro1200 <specoraro@luc.edu>
+Date:   Tue Aug 9 17:05:07 2022 -0500
+
+    Add potential contact for email
+
+[33mcommit 828f86bdacb43dd7c94ea883f0be1d3778d6b74e[m[33m ([m[1;31morigin/master[m[33m)[m
+Merge: 1cec796 19e8650
+Author: specoraro1200 <69777511+specoraro1200@users.noreply.github.com>
+Date:   Tue Aug 9 16:33:41 2022 -0500
+
+    Merge pull request #1 from specoraro1200/TEST
+    
+    Test
+
+[33mcommit 19e8650109a03135284c8b5a1c3ccbcc779f4c75[m[33m ([m[1;31morigin/TEST[m[33m)[m
+Author: specoraro1200 <specoraro@luc.edu>
+Date:   Tue Aug 9 16:01:13 2022 -0500
+
+    IDEK
+
+[33mcommit 4d1835d2e6a5b5fc46ee4c1fd9aa835b2f894f0f[m
+Author: specoraro1200 <specoraro@luc.edu>
+Date:   Mon Aug 8 18:37:59 2022 -0500
+
+    Update
+
+[33mcommit df4c675df99afc92034aaac8ccf609f502ea77ce[m
+Author: specoraro1200 <specoraro@luc.edu>
+Date:   Mon Aug 8 02:33:08 2022 -0500
+
+    Added tooltip fuck react-bootstrap
+
+[33mcommit 4130a388690d2fc6356cdcc23c2b4f100242ec8f[m
+Author: specoraro1200 <specoraro@luc.edu>
+Date:   Mon Aug 8 02:10:56 2022 -0500
+
+    fuck tooltips on react
+
+[33mcommit 05e745d887c7ef05943e1811fad3a5f5aaf4b8fc[m
+Author: specoraro1200 <specoraro@luc.edu>
+Date:   Sun Aug 7 21:18:31 2022 -0500
+
+    General update 3
+
+[33mcommit e4f03feb25dd936cfd68fae2f93a5827624425da[m
+Author: specoraro1200 <specoraro@luc.edu>
+Date:   Sun Aug 7 19:00:20 2022 -0500
+
+    General work 2
+
+[33mcommit c24f2573e379d64bbe69bc3d1ce1f6ea80a0489e[m
+Author: specoraro1200 <specoraro@luc.edu>
+Date:   Sun Aug 7 18:49:36 2022 -0500
+
+    General work:
+
+[33mcommit 24f26e5e46d24b5019c158f7f2ec533f517f99ba[m
+Author: specoraro1200 <specoraro@luc.edu>
+Date:   Sun Aug 7 16:17:26 2022 -0500
+
+    Add SlimeByte
+
+[33mcommit 86ec0b08e6864c0aafdc6dbd52d3c2fe7ee237ba[m
+Author: specoraro1200 <specoraro@luc.edu>
+Date:   Sun Aug 7 14:10:28 2022 -0500
+
+    Edit link class
+
+[33mcommit 87c6296444ba356566c5898c281ffc95e9dec1ce[m
+Author: specoraro1200 <specoraro@luc.edu>
+Date:   Sun Aug 7 14:02:18 2022 -0500
+
+    Center h2
+
+[33mcommit 72ee33e80fce5fb9c463b85ab4a674a299847099[m
+Author: specoraro1200 <specoraro@luc.edu>
+Date:   Sun Aug 7 02:13:21 2022 -0500
+
+    Identify Error in Education Tab
+
+[33mcommit 1cec796692f641d185f85b2a6f7e922cda329c47[m
+Author: specoraro1200 <specoraro@luc.edu>
+Date:   Sun Aug 7 01:35:18 2022 -0500
+
+    Error with mobile scroll
