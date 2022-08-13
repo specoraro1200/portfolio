@@ -105,11 +105,11 @@ function App() {
         </h1>
         
         <h3 class = "mb-4 profession ">Full Stack Developer</h3>
-        <div  class="subheading mb-4">
+        <div  class="mb-4 city">
           Chicago, IL
           <a href="mailto:scpecoraro@gmail.com"> scpecoraro@gmail.com</a>
         </div>
-        
+
         <ul class="list-inline links mb-0" >
           <li class="list-inline-item" id = "stock">
             <a href="http://www.cnnstockpredictor.com/polls">
@@ -170,20 +170,22 @@ function App() {
             <img src={require('./images/buses.png')}class = "img-fluid" alt="Python" id="projectImage"/>
           </div> 
           <div class="col-md-5">
-            <h3 class="mb-0">CTA Bus Delay Tracker</h3>
+            <h3 class="mb-0 project">CTA Bus Delay Tracker</h3>
+
               <div class="subheading mb-3">
-              <div>Web Application- <a href="https://github.com/specoraro1200/ctabustracker">View Code</a>
+              <div>Web Application- 
+                <a id="test" href="https://github.com/specoraro1200/ctabustracker">View Code!</a>
               </div>
                 <ul class="list-inline list-social-icons mb-0" >
                   <span>Skills Used: </span>
                   <li class="list-inline-item" >
-                  <Tooltip title="React.js" placement="top">
+                  <Tooltip title="React.js" placement="bottom">
                     <img src={require('./images/react.png')} alt="Python" width="35" height="35" style={{marginRight:"1rem"}}/>
                   </Tooltip>
-                  <Tooltip title="Node.js" placement="top">
+                  <Tooltip title="Node.js" placement="bottom">
                     <img src={require('./images/nodejs.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
                   </Tooltip>
-                  <Tooltip title="RDS, Lambda, EC2" placement="top">
+                  <Tooltip title="RDS, Lambda, EC2" placement="bottom">
                     <img src={require('./images/amazon-aws.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
                   </Tooltip>
                   <Tooltip title="MariaDB" placement="top">
@@ -228,21 +230,22 @@ function App() {
             </a>
           </div> 
           <div class="col-md-5">
-            <h3 class="mb-0">CNN Stock Scraper</h3>
+            <h3 class="mb-0 project">CNN Stock Scraper</h3>
             <div class="subheading mb-3">
-            <div>Web Application- <a href="https://github.com/specoraro1200/Collect-Stock-Data-Through-Terminal">View Code</a>
+            <div>Web Application- 
+              <a id="test" href="https://github.com/specoraro1200/Collect-Stock-Data-Through-Terminal">View Code!</a>
               </div>
               
               <ul class="list-inline  mb-0" >
                 <span>Skills Used: </span>
                 <li class="list-inline-item" >
-                <Tooltip title="Django" placement="top">
+                <Tooltip title="Django" placement="bottom">
                   <img src={require('./images/django.png')} alt="Python" width="35" height="35" style={{marginRight:"1rem"}}/>
                 </Tooltip>
-                <Tooltip title="EC2" placement="top">
+                <Tooltip title="EC2" placement="bottom">
                   <img src={require('./images/amazon-aws.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
                 </Tooltip>
-                <Tooltip title="MySQL" placement="top">
+                <Tooltip title="MySQL" placement="bottom">
                   <img src={require('./images/mysql.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
                 </Tooltip>
                 <Tooltip title="Apache" placement="top">
@@ -272,27 +275,27 @@ function App() {
         </div>
 
         <div class ="row" data-aos="fade-left">
-          <div class="col-md-7" id = "projectImageColumn">
-            <a href="http://www.performancescheduler.com">
+          <div class="col-md-7 " id = "projectImageColumn">
+            <a  href="http://www.performancescheduler.com">
               <img src={require('./images/performanceScheduler.png')}class = "img-fluid" alt="Python" id="projectImage"/>
             </a>
           </div> 
           <div class="col-md-5">
-            <h3 class="mb-0">Performance Scheduler</h3>
+            <h3 class="mb-0 project" >Performance Scheduler</h3>
             
             <div class="subheading mb-3">
-            <div>Web Application- <a href="https://github.com/specoraro1200/DatabaseProject">View Code</a>
+            <div>Web Application- <a id="test" href="https://github.com/specoraro1200/DatabaseProject">View Code</a>
               </div>
               <ul class="list-inline list-social-icons mb-0" >
                 <span>Skills Used: </span>
                 <li class="list-inline-item" >
-                <Tooltip title="Django" placement="top">
+                <Tooltip title="Django" placement="bottom">
                   <img src={require('./images/django2.png')} alt="Python" width="35" height="35" style={{marginRight:"1rem"}}/>
                 </Tooltip>
-                <Tooltip title="EC2" placement="top">
+                <Tooltip title="EC2" placement="bottom">
                   <img src={require('./images/amazon-aws.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
                 </Tooltip>
-                <Tooltip title="MySQL" placement="top">
+                <Tooltip title="MySQL" placement="bottom">
                   <img src={require('./images/mysql.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
                 </Tooltip>
                 <Tooltip title="Apache" placement="top">
@@ -322,9 +325,9 @@ function App() {
                 <img src={require('./images/broadstreet.png')}class = "img-fluid" alt="Python" id="projectImage"/>
             </div> 
             <div class="col-md-5">
-              <h3 class="mb-0">Webscrape Covid Data</h3>
+              <h3 class="mb-0 project">Webscrape Covid Data</h3>
               <div class="subheading mb-3">
-                <div>Game- <a href="https://github.com/specoraro1200/WebScrapingCovidData">View Code</a>
+                <div>Game- <a id="test" href="https://github.com/specoraro1200/WebScrapingCovidData">View Code</a>
                 </div>
                 <ul class="list-inline list-social-icons mb-0" >
                   <span>Skills Used: </span>
@@ -353,14 +356,14 @@ function App() {
                 <img src={require('./images/slime.png')}class = "img-fluid" alt="Python" id="projectImage"/>
             </div> 
           <div class="col-md-5">
-            <h3 class="mb-0">SlimeByte</h3>
+            <h3 class="mb-0 project">SlimeByte</h3>
             <div class="subheading mb-3">
-              <div>Game- <a href="https://github.com/csantana1121/Slime-pygames">View Code</a>
+              <div>Game- <a id="test" href="https://github.com/csantana1121/Slime-pygames">View Code</a>
               </div>
               <ul class="list-inline list-social-icons mb-0" >
                 <span>Skills Used: </span>
                 <li class="list-inline-item" >
-                  <Tooltip title="Python" placement="top">
+                  <Tooltip title="Python" placement="bottom">
                     <img src={require('./images/python.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
                   </Tooltip>
                 </li>
