@@ -105,10 +105,11 @@ function App() {
         </h1>
         
         <h3 class = "mb-4 profession ">Full Stack Developer</h3>
-        <div  class="mb-4 city">
-          Chicago, IL
-          <a href="mailto:scpecoraro@gmail.com"> scpecoraro@gmail.com</a>
-        </div>
+        <h6  class="mb-4 city">
+          Chicago, IL - 
+          <a href="mailto:scpecoraro@gmail.com">scpecoraro@gmail.com</a>
+          - 847-527-9749
+        </h6>
 
         <ul class="list-inline links mb-0" >
           <li class="list-inline-item" id = "stock">
@@ -332,21 +333,21 @@ function App() {
                 <ul class="list-inline list-social-icons mb-0" >
                   <span>Skills Used: </span>
                   <li class="list-inline-item" >
-                  <Tooltip title="Jupyter Notebook" placement="top">
+                  <Tooltip title="Jupyter Notebook" placement="bottom">
                     <img src={require('./images/jupyter.png')} class = "tooltips "alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
                   </Tooltip>
-                  <Tooltip title="Python" placement="top">
+                  <Tooltip title="Python" placement="bottom">
                     <img src={require('./images/python.png')} alt="Python" width="40" height="40" style={{marginRight:"1rem"}}/>
                   </Tooltip>
                   </li>
                 </ul>
-                <ul>
-                  <li>Developed a platform based game where the player controls a slime trying to escape out of the cave </li>
-                  <li>Game was built with Python and Pygame</li>
-                  <li>The player can pick up powerups, which can change the players primary weapon or movement into something powerful</li>
-                  <li>The game has three levels, and the player cannot die or else they will have to resetart from level 1</li>
-                  <li>Enemies are littered throughout the level, and so the player must navigate around them in order to make it to the end of the level</li>
-                </ul>
+                  <ul>
+                    <li>Developed a platform based game where the player controls a slime trying to escape out of the cave </li>
+                    <li>Game was built with Python and Pygame</li>
+                    <li>The player can pick up powerups, which can change the players primary weapon or movement into something powerful</li>
+                    <li>The game has three levels, and the player cannot die or else they will have to resetart from level 1</li>
+                    <li>Enemies are littered throughout the level, and so the player must navigate around them in order to make it to the end of the level</li>
+                  </ul>
               </div>
             </div>
           </div>
@@ -445,9 +446,6 @@ function App() {
                 Created a bash script that automates computer setup, saving more than one hour of time for 
                 each computer setup. 
               </li>
-              <li>
-                
-              </li>
             </ul>
           </div>
         </div>
@@ -483,6 +481,7 @@ function App() {
         <div class="col">
           <div class="d-flex justify-content-between">
             <h4 class="mb-0">Loyola University Chicago - Bachelor of Science</h4>
+            <img style={{height:"400"}}src={require('./images/loyola.jpg')}class = "img-fluid" alt="Python" id="projectImage"/>
             <h4 class="mb-0">Graduating August 2019 - December-2022</h4>
           </div>
           <div class="subheading mb-3">Computer Science</div>
