@@ -19,7 +19,7 @@ function App() {
        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-
+       duration: 850,
        delay: 0, // values from 0 to 3000, with step 50ms
        easing: 'ease', // default easing for AOS animations
        once: true, // whether animation should happen only once - while scrolling down
@@ -79,7 +79,7 @@ function App() {
           <a class="nav-link js-scroll-trigger" href="#education">Education</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#Contact">Certifications</a>
+          <a class="nav-link js-scroll-trigger" href="#Certifications">Certifications</a>
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
@@ -164,7 +164,7 @@ function App() {
             <img src={require('./images/buses.png')}class = "img-fluid" alt="Python" id="projectImage"/>
           </div> 
           <div class="col-md-6">
-            <h3 class="mb-0 heading">CTA Bus Delay Tracker</h3>
+            <h3 class="center mb-0 heading">CTA Bus Delay Tracker</h3>
               <div class="subheading center mb-3">
                 <div>Web App- <a id="viewCode" href="https://github.com/specoraro1200/ctabustracker">View Code!</a></div >
                 <ul class="list-inline my-1" >
@@ -206,9 +206,8 @@ function App() {
                     contents to its users. This lambda function runs a python script that calls the CTA Rest API. 
                   </li>
                   <li>
-                    An AWS RDS MariaDB server is utilized to store bus data, user data, and web scraped data. To combat high load times from querying
-                    enourmouse tables, a Redis server was employed to cut down load times by up to 10 seconds. Redis was quick and easy to employ, and 
-                    helped to make the application more user friendly. 
+                    An RDS MariaDB server is utilized to store bus data, user data, and web scraped data. To combat high load times, a Redis server was employed to cut down load times by up to 10 seconds. Redis was quick and easy to employ, and 
+                    helped to make the application more accessible. 
                   </li>
                   <li>A React.js frontend and Node.js/express.js backend was used to create the web application. </li>
                 </ul>
@@ -223,7 +222,7 @@ function App() {
             </a>
           </div> 
           <div class="col-md-6">
-            <h3 class="mb-0 heading">CNN Stock Scraper</h3>
+            <h3 class="center mb-0 heading">CNN Stock Scraper</h3>
             <div class="subheading center mb-3">
               <div>Web App- 
                 <a id="viewCode" href="https://github.com/specoraro1200/Collect-Stock-Data-Through-Terminal">View Code!</a>
@@ -257,7 +256,7 @@ function App() {
             </div>
             <div class = "description" >
               <ul>
-                <li>Developed a web application that allows users to compare CNN's estimation of stock prices against real prices. </li>
+                <li>A web app that allows users to compare CNN's estimation of stock prices against real prices.</li>
                 <li>A bash script runs once daily on an AWS EC2 which web scrapes over 6000 pages from CNN. </li>
                 <li>A postgres database stores the data from the webscraping, as well as user data. </li>
                 <li>If a stock is not available, a use is able to send a request to the server, which checks if that stock is both available for web scraping and is not already covered, 
@@ -275,7 +274,7 @@ function App() {
             </a>
           </div> 
           <div class="col-md-6">
-            <h3 class="mb-0 heading" >Performance Scheduler</h3>
+            <h3 class="center mb-0 heading" >Performance Scheduler</h3>
             <div class="subheading center mb-3">
               <div>Web App- <a id="viewCode" href="https://github.com/specoraro1200/DatabaseProject">View Code</a></div>
                 <ul class="list-inline my-1" >
@@ -319,7 +318,7 @@ function App() {
               <img src={require('./images/broadstreet.png')}class = "img-fluid" alt="Python" id="projectImage"/>
           </div> 
           <div class="col-md-6">
-            <h3 class="mb-0 heading">Webscrape Covid Data</h3>
+            <h3 class="center mb-0 heading">Webscrape Covid Data</h3>
             <div class="subheading center mb-3">
               <div>Game- <a id="viewCode" href="https://github.com/specoraro1200/WebScrapingCovidData">View Code</a>
               </div>
@@ -352,7 +351,7 @@ function App() {
                 <img src={require('./images/slime.png')}class = "img-fluid" alt="Python" id="projectImage"/>
             </div> 
             <div class="col-md-6">
-              <h3 class="mb-0 heading">SlimeByte</h3>
+              <h3 class="center mb-0 heading">SlimeByte</h3>
               <div class="subheading center mb-3">
                 <div>Game- <a id="viewCode" href="https://github.com/csantana1121/Slime-pygames">View Code</a>
                 </div>
@@ -383,123 +382,136 @@ function App() {
     
     <section class="resume-section" id="experience">
       <div class="container-fluid">
-        <h2 >Work Experience</h2>
-        <div class="row" data-aos="flip-left" >
-          <div class="col">
-            <div class="d-flex justify-content-between">
-              <h3 class="heading mb-0">IT/AWS Support</h3>
-              <h4>Jan. 2022 - Jul. 2022</h4>
+        <h2 class = "center mb-2">Work Experience</h2>
+
+        <div class="row" data-aos="flip-right" >
+          <div class="col" style={{display:"flex",flexWrap: "wrap"}} >
+            <div style ={{flexDirection:"column",flex:5,minWidth:"300px"}}>
+              <div >
+                <h3 class = "heading mb-0">IT/AWS Support</h3>
+              </div>
+              <div class="subheading mb-3">Mikan Associates</div>
+              <div class = "description">
+                <ul>
+                  <li>
+                    Responsible for the AWS enviornment, computer setup, and troubleshooting. 
+                  </li>
+                  <li>
+                    Created a bash script that automated computer setup, saving more than one hour of time for 
+                    each computer. 
+                  </li>
+                  <li>
+                    Diagnosed errors within the microsoft enviornment, as well as resolve tickets
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="subheading mb-3">Mikan Associates</div>
-            <div class = "description">
-              <ul>
-                <li>
-                  Intern at video game start up, with the main project focusing on Aerial Heroes, a game focused on Aerial combat
-                </li>
-                <li>
-                  In charge of the aircraft movement, interactions, and shooting. Achieved smooth movement within the aircraft,
-                  as well as the ability for the aircraft to throw projectiles. 
-                </li>
-                <li>
-                  Helped to work on the networking of the game, allowing players to be able to join a game through server selection. 
-                </li>
-              </ul>
-            </div>
+            <h4 class="date">Jun. 2021 - Dec. 2021</h4>
           </div>
         </div>
 
         <div class="row" data-aos="flip-right" >
-          <div class="col">
-          <div class="d-flex justify-content-between">
-            <h3 class = "heading mb-0">Software Developer Intern</h3>
-            <h4>Jun. 2021 - Dec. 2021</h4>
-          </div>
-            <div class="subheading mb-3">Reaction Digital</div>
-            <div class = "description">
-              <ul>
-                <li>
-                  Responsible for the AWS enviornment, computer setup, and troubleshooting errors. 
-                </li>
-                <li>
-                  Created a bash script that automates computer setup, saving more than one hour of time for 
-                  each computer setup. 
-                </li>
-              </ul>
+          <div class="col" style={{display:"flex",flexWrap: "wrap"}} >
+            <div style ={{flexDirection:"column",flex:5,minWidth:"300px"}}>
+              <div >
+                <h3 class = "heading mb-0">Software Developer Intern</h3>
+              </div>
+              <div class="subheading mb-3">Reaction Digital</div>
+              <div class = "description">
+                <ul>
+                  <li>
+                    Intern at game startup focusing on a game centered around aerial combat 
+                  </li>
+                  <li>
+                    Responsible for coding the aircraft movement, allowing for smooth and easy control of the aircraft. 
+                  </li>
+                  <li>
+                    Worked with a team in charge of setting up the networking of the game, allowing for players to join a game through server selection.
+                  </li>
+                </ul>
+              </div>
             </div>
+            <h4 class="date">Jun. 2021 - Dec. 2021</h4>
           </div>
         </div>
 
-        <div class="row" data-aos="flip-up" >
-          <div class="col">
-          <div class="d-flex justify-content-between">
-            <h3 class = "heading mb-0">Python Developer</h3>
-            <h4>Jan. 2021 - Jun. 2021</h4>
-          </div>
-            <div class="subheading mb-3">Broadstreet</div>
-            <div class = "description">
-              <ul>
-                <li>
-                  Responsible for the AWS enviornment, computer setup, and troubleshooting errors. 
-                </li>
-                <li>
-                  Created a bash script that automates computer setup, saving more than one hour of time for 
-                  each computer setup. 
-                </li>
-              </ul>
+        <div class="row" data-aos="flip-right" >
+          <div class="col" style={{display:"flex",flexWrap: "wrap"}} >
+            <div style ={{flexDirection:"column",flex:5,minWidth:"300px"}}>
+              <div>
+                <h3 class = "heading mb-0">Python Developer</h3>
+              </div>
+              <div class="subheading mb-3">Reaction Digital</div>
+              <div class = "description">
+                <ul>
+                  <li>
+                  Web-scrape, transform, and transpose data regarding Covid-19 infection and deaths rates across the US.
+                  </li>
+                  <li>
+                   Completed the automation process of seven states, eliminating the need for interns to manually input data.
+                  </li>
+                  <li>
+                  Supervisor of the automation team (10+ interns). Resolved questions asked by interns and in charge of assigning tasks. 
+                  </li>
+                </ul>
+              </div>
             </div>
+            <h4 class="date">Jan. 2021 - Jun. 2021</h4>
           </div>
         </div>
 
-        <div class="row" data-aos="flip-down" >
-          <div class="col">
-          <div class="d-flex justify-content-between">
-            <h3 class = "heading mb-0">Retail Employee</h3>
-            <h4>Aug. 2019 - Jun. 2021</h4>
-          </div>
-          <div class="subheading mb-3">Marianos</div>
-          <div class = "description">
-            <ul>
-              <li>
-                Responsible for the AWS enviornment, computer setup, and troubleshooting errors. 
-              </li>
-              <li>
-                Created a bash script that automates computer setup, saving more than one hour of time for 
-                each computer setup. 
-              </li>
-            </ul>
+        <div class="row" data-aos="flip-right" >
+          <div class="col" style={{display:"flex",flexWrap: "wrap"}} >
+            <div style ={{flexDirection:"column",flex:5,minWidth:"300px"}}>
+              <div>
+                <h3 class = "heading mb-0">Retail Employee</h3>
+              </div>
+              <div class="subheading mb-3">Marianos</div>
+              <div class = "description">
+                <ul>
+                  <li>
+                    Apart of the clicklist team, responsible for completing customer orders on time and deliving orders to customer cars on arrival
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+            <h4 class="date">Jan. 2021 - Jun. 2021</h4>
           </div>
         </div>
-      </div>
       </div>
     </section>   
        
     <section class="resume-section" id="education">
-      <h2 class="mb-2">Education</h2>
-      <div class="row" data-aos="flip-down" >
-        <div class="col">
-          <div class="d-flex justify-content-between">
-            <h3 class="mb-0">Loyola University Chicago </h3>
-            <h4 class="mb-0">Graduating Aug. 2019 - Dec. 2022</h4>
-          </div>
-          <div class="subheading mb-3">Bachelor of Science:Computer Science</div>
-          <div class ="description">
-            <ul>
-              <li>
-                3.85 GPA
-              </li>
-              <li>
-                Dean's List (5/5) Semesters
-              </li>
-            </ul>
+      <h2 class="center mb-2">Education</h2>
+      <div class="row" data-aos="flip-right" >
+          <div class="col" style={{display:"flex",flexWrap: "wrap"}} >
+            <div style ={{flexDirection:"column",flex:5,minWidth:"300px"}}>
+              <div>
+                <h3 class = "heading mb-0">Loyola University Chicago</h3>
+              </div>
+              <div class="subheading mb-3">Bachelor of Science:Computer Science</div>
+              <div class = "description">
+                <ul>
+                  <li>
+                  3.85 GPA
+                  </li>
+                  <li>
+                  Dean's List (5/5) Semesters
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <h4 class="date">Anticipated Aug. 2019 - Dec. 2022</h4>
           </div>
         </div>
-      </div>
+      
     </section>
 
     <section class="resume-section p-3" id="Certifications">
       <div class="my-auto">
         <h2 class="mb-5">Certs</h2>
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center" data-aos="flip-up">
           <a href="https://www.credly.com/badges/b16efb42-38d8-4ec7-8648-925ab8604bae/public_url">
             <img style={{height:200,width:200}}src={require('./images/cp.png')}class = "img-fluid" alt="Python" id="projectImage"/>
           </a>
@@ -513,7 +525,7 @@ function App() {
     <section class="resume-section " id="skills">
       <div class="container-fluid">
         <h2 >Skills</h2>
-        <div class="row">
+        <div class="row" data-aos="flip-down">
           <h4 class="heading">Programming Skills</h4>
           <div class = "description" >
             <ul class="list-inline">

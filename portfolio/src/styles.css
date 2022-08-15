@@ -43,7 +43,6 @@ h2 {
 
 h3 {
   font-size: 2rem;
-  text-align: center;
 }
 
 .heading{
@@ -107,7 +106,10 @@ h3 {
   #projectType{
     text-align: center;
   }
-  .project{
+  .heading{
+    text-align: center;
+  }
+  .subheading{
     text-align: center;
   }
   #test {
